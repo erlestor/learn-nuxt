@@ -4,7 +4,7 @@ const msg = useState(() => "Well props are working")
 </script>
 
 <template>
-  <div class="page">
+  <Page>
     <span class="text-h1 text-secondary">Home</span>
     <span class="text-h3">{{ counter }}</span>
     <div>
@@ -19,15 +19,5 @@ const msg = useState(() => "Well props are working")
         >Change props</v-btn
       >
     </div>
-  </div>
+  </Page>
 </template>
-
-<style scoped>
-.page {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 24px;
-  gap: 16px;
-}
-</style>
