@@ -2,8 +2,7 @@
 export default defineNuxtConfig({
   modules: [
     "@invictus.codes/nuxt-vuetify",
-    // cause eslint sucks apparently
-    // ["@nuxtjs/eslint-module", { fix: true }],
+    // "@nuxtjs/eslint-module"
   ],
   vuetify: {
     vuetifyOptions: {
