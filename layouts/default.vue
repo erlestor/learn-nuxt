@@ -5,6 +5,8 @@ const navLinks = [
   { title: "Home", link: "/" },
   { title: "Fetch", link: "/fetch" },
 ]
+
+const options = ["This does nothing", "This also does nothing"]
 </script>
 
 <template>
@@ -16,7 +18,20 @@ const navLinks = [
       ></v-app-bar-nav-icon>
       <v-toolbar-title>Learn Nuxt</v-toolbar-title>
       <v-spacer />
-      <v-btn variant="text" icon="mdi-dots-vertical"></v-btn>
+      <v-menu>
+        <template v-slot:activator="{ props }">
+          <v-btn v-bind="props" variant="text" icon="mdi-dots-vertical"></v-btn>
+        </template>
+        <v-list>
+          <v-list-item
+            v-for="(option, index) in options"
+            :key="index"
+            :value="index"
+          >
+            <v-list-item-title>{{ option }}</v-list-item-title>
+          </v-list-item>
+        </v-list>
+      </v-menu>
     </v-app-bar>
     <v-navigation-drawer v-model="drawer">
       <v-list>
