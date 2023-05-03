@@ -16,6 +16,7 @@ const pages = ["client", "static", "server"]
         </NuxtLink>
       </div>
     </div>
+    <v-btn @click="clearNuxtData('time')">Empty cache</v-btn>
   </Page>
 </template>
 
