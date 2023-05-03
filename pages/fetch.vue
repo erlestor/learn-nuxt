@@ -1,10 +1,12 @@
 <script setup lang="ts">
-const { data, pending } = useLazyFetch("/api/getCurrentTime", {
+const { data, pending } = await useFetch("/api/getCurrentTime", {
+  lazy: true,
   transform: (data) => data.substring(0, 19),
 })
 
-// virke som om den bruke den data som sist va brukt, men refetche også ny i tilfelle den e oppdatert egt
-// ved refresh vente den på data før den viser siden, derav useLazyFetch e nyttig
+// ved navigasjon bruke den data som sist va brukt, men refetche også ny som erstatte den gamle
+// ved refresh vente den på data før den viser siden, alle sidan e ssr?
+// trodd man kunna bruk useLazyFetch for å fikse mennjjj
 </script>
 
 <template>
