@@ -12,4 +12,16 @@ export default defineNuxtConfig({
       },
     },
   },
+  app: {
+    head: {
+      title: "Learn Nuxt",
+      meta: [
+        {
+          name: "description",
+          content:
+            "This is my amazing site aimed at learning Nuxt and Vuetify.",
+        },
+      ],
+    },
+  },
 })
