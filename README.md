@@ -43,3 +43,4 @@ npm run preview
 - Test using express for the server with middleware
 - Setup github workflow for CI
 - Setup automatic deploy from github to apache server
+- [Hybrid rendering](https://nuxt.com/docs/guide/concepts/rendering)
