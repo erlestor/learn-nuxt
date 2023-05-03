@@ -5,5 +5,3 @@ const props = defineProps({ msg: String })
 <template>
   <span class="text-body1">{{ props.msg }}</span>
 </template>
-
-<style scoped></style>
