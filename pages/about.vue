@@ -1,6 +1,7 @@
-<script lang="ts"></script>
-
 <template>
+  <Head>
+    <Title>About</Title>
+  </Head>
   <main>
     <span class="text-h1 text-secondary">About</span>
     <NuxtLink to="/">
