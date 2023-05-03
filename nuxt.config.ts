@@ -24,4 +24,9 @@ export default defineNuxtConfig({
       ],
     },
   },
+  routeRules: {
+    "/fetch/client": { ssr: false },
+    "/fetch/server": { ssr: true },
+    "/fetch/static": { swr: true },
+  },
 })
