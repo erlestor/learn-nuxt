@@ -2,6 +2,7 @@
 const { header } = defineProps(["header"])
 
 const { data, pending, refresh } = await useLazyFetch("/api/getCurrentTime", {
+  key: "time",
   transform: (data) => data.substring(0, 19),
 })
 </script>
@@ -20,7 +21,7 @@ const { data, pending, refresh } = await useLazyFetch("/api/getCurrentTime", {
       :loading="pending && data"
       :disabled="pending"
       @click="refresh"
-      >Refresh</v-btn
+      >refresh</v-btn
     >
     <NuxtLink to="/fetch">
       <v-btn>Back</v-btn>
