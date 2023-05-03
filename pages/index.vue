@@ -1,21 +1,33 @@
-<script lang="ts"></script>
+<script setup lang="ts">
+const counter = useState(() => 0)
+const msg = useState(() => "Well props are working")
+</script>
 
 <template>
-  <main>
+  <div class="page">
     <span class="text-h1 text-secondary">Home</span>
-    <NuxtLink to="/about">
-      <v-btn color="primary">About</v-btn>
-    </NuxtLink>
-  </main>
+    <span class="text-h3">{{ counter }}</span>
+    <div>
+      <v-btn color="primary" @click="counter++">Increment</v-btn>
+      <v-btn color="secondary" @click="counter--">Descrement</v-btn>
+    </div>
+    <ComponentWithProps :msg="msg" />
+    <div>
+      <v-btn
+        @click="msg = 'And I can change them too'"
+        :disabled="msg === 'And I can change them too'"
+        >Change props</v-btn
+      >
+    </div>
+  </div>
 </template>
 
 <style scoped>
-main {
+.page {
   display: flex;
   flex-direction: column;
   align-items: center;
   padding-top: 24px;
-  height: 100vh;
   gap: 16px;
 }
 </style>
