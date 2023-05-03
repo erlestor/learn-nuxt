@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const { header } = defineProps(["header"])
+const { header, result } = defineProps<{
+  header: string
+  result: any
+}>()
 
-const { data, pending, refresh } = await useLazyFetch("/api/getCurrentTime", {
-  key: "time",
-  transform: (data) => data.substring(0, 19),
-})
+const { data, pending, refresh } = result
 </script>
 
 <template>
