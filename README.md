@@ -1,15 +1,12 @@
-# Nuxt 3 Minimal Starter
+# Learn Nuxt 3
 
-Look at the [Nuxt 3 documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This is my playground for learning nuxt and vuetify.
 
 ## Setup
 
-Make sure to install the dependencies:
+### Install dependencies
 
 ```bash
-# yarn
-yarn install
-
 # npm
 npm install
 
@@ -17,17 +14,13 @@ npm install
 pnpm install
 ```
 
-## Development Server
-
-Start the development server on `http://localhost:3000`
+### Start development server
 
 ```bash
 npm run dev
 ```
 
-## Production
-
-Build the application for production:
+### Build for production
 
 ```bash
 npm run build
@@ -39,4 +32,14 @@ Locally preview production build:
 npm run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
+## Useful links
+
+- [Nuxt 3 docs](https://nuxt.com/docs)
+- [Vuetify docs](https://vuetifyjs.com/en/)
+
+## Roadmap
+
+- Use composables for shared state. Compare to state management libraries like Pinia.
+- Test using express for the server with middleware
+- Setup github workflow for CI
+- Setup automatic deploy from github to apache server
