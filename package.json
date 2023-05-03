@@ -12,6 +12,7 @@
     "@invictus.codes/nuxt-vuetify": "^0.2.20",
     "@nuxtjs/eslint-module": "^4.0.2",
     "@types/node": "^18",
+    "eslint": "^8.39.0",
     "nuxt": "^3.4.3"
   }
 }
