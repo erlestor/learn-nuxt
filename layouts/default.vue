@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useTheme } from "vuetify"
 const drawer = useState(() => false)
 
 const navLinks = [
@@ -7,6 +8,10 @@ const navLinks = [
 ]
 
 const options = ["This does nothing", "This also does nothing"]
+
+const theme = useTheme()
+const toggleTheme = () =>
+  (theme.global.name.value = theme.global.current.value.dark ? "light" : "dark")
 </script>
 
 <template>
@@ -18,6 +23,15 @@ const options = ["This does nothing", "This also does nothing"]
       ></v-app-bar-nav-icon>
       <v-toolbar-title>Learn Nuxt</v-toolbar-title>
       <v-spacer />
+      <v-btn
+        @click="toggleTheme"
+        variant="text"
+        :icon="
+          theme.global.current.value.dark
+            ? 'mdi-weather-night'
+            : 'mdi-weather-sunny'
+        "
+      />
       <v-menu>
         <template v-slot:activator="{ props }">
           <v-btn v-bind="props" variant="text" icon="mdi-dots-vertical"></v-btn>
